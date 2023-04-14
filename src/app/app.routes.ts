@@ -1,15 +1,11 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/inbox',
+    redirectTo: 'home',
     pathMatch: 'full',
-  },
-  {
-    path: 'folder/:id',
-    loadComponent: () =>
-      import('./folder/folder.page').then((m) => m.FolderPage),
   },
   {
     path: 'home',
@@ -23,4 +19,15 @@ export const routes: Routes = [
     path: 'cadastro',
     loadComponent: () => import('./cadastro/cadastro.page').then( m => m.CadastroPage)
   },
+  {
+    path: 'esqueci-senha',
+    loadComponent: () => import('./esqueci-senha/esqueci-senha.page').then( m => m.EsqueciSenhaPage)
+  },
 ];
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

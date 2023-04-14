@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class=”loginPage” scroll=”false”>
+<ion-content padding class=”loginPage” scroll=”false” >
   <ion-list>
 
     <ion-item>
@@ -20,8 +20,5 @@
   </ion-list>
 
   <ion-button fill="solid" expand="block" color="dark">Logar</ion-button>
-  <ion-button fill="outline" expand="block" color="success" >
-      <ion-icon slot="start" name="add"></ion-icon>
-      Fazer cadastro
-  </ion-button>
+  <ion-button expand="block" [routerLink]="['/esqueci-senha']">Esqueci minha senha</ion-button>
 </ion-content>

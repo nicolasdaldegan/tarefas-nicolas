@@ -5,12 +5,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <img src='../../assets/icon.jpg' width="300px" >
+  <img [src]='icon' width="300px" >
 
 
-
-  <ion-button class="is" color="warning">Iniciar Sessão</ion-button>
-  <p class="ion-text-center" style="color: orange;">Não conseguiu iniciar sessão?</p>
-  <ion-button class="is2" fill="clear">Registrar agora</ion-button>
+  <ion-button class="is" color="warning" [routerLink]="['/login']">Iniciar Sessão</ion-button>
+  <ion-button class="is2" color="warning" [routerLink]="['/cadastro']" fill="clear">Registrar agora</ion-button>
 
 </ion-content>
