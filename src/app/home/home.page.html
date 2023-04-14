@@ -1,14 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <img [src]='icon' width="300px" >
 
+  <ion-col>
+      <div class="ion-text-center">
+        <ion-button color="warning" [routerLink]="['/login']"><strong>Iniciar Sessão</strong></ion-button>
+        <p style="color: orange;" [routerLink]="['/cadastro']" fill="clear"><strong>Não possui uma conta?<br>Registrar agora</strong></p>
+      </div>
+  </ion-col>
 
-  <ion-button class="is" color="warning" [routerLink]="['/login']">Iniciar Sessão</ion-button>
-  <ion-button class="is2" color="warning" [routerLink]="['/cadastro']" fill="clear">Registrar agora</ion-button>
 
 </ion-content>
