@@ -1,0 +1,73 @@
+<ion-header  class="ion-no-border" fill="clear">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="cabecalho">
+    <img [src]='icon'>
+    <p style="text-align: center;"><strong>Qual a receita de hoje?</strong></p>
+    <ion-searchbar placeholder="buscar..." color="light"></ion-searchbar>
+  </div>
+
+  <div id="corpo">
+    <h3 style="text-align: center;"><strong>Refeições</strong></h3>
+    <ion-row class="ion-justify-content-center">
+      <ion-card fill="clear"  class="ion-text-center">
+
+        <ion-card-content>
+          <img src="../../assets/icon/strogonoff.jpg">
+        </ion-card-content>
+        <ion-card-subtitle><strong>Strogonoff</strong></ion-card-subtitle>
+      </ion-card>
+      
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-content>
+          <img src="../../assets/icon/arrozcarreteiro.jpg">
+        </ion-card-content>
+
+      <ion-card-subtitle><strong>Arroz<br>Carreteiro</strong></ion-card-subtitle>
+      </ion-card>
+  
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-content class="ion-text-center">
+          <img src="../../assets/icon/frangocombata.jpg">
+        </ion-card-content>
+
+        <ion-card-subtitle><strong>Frango com<br>Batata</strong></ion-card-subtitle>
+
+      </ion-card>
+      
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-content>
+          <img src="../../assets/icon/imagem-branca.png">
+        </ion-card-content>
+
+        <ion-card-subtitle><strong>Modelo</strong></ion-card-subtitle>
+      </ion-card>
+      
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-content>
+          <img src="../../assets/icon/imagem-branca.png">
+        </ion-card-content>
+
+        <ion-card-subtitle><strong>Modelo</strong></ion-card-subtitle>
+      </ion-card>
+
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-content>
+          <img src="../../assets/icon/imagem-branca.png">
+        </ion-card-content>
+
+        <ion-card-subtitle><strong>Modelo</strong></ion-card-subtitle>
+      </ion-card>
+      
+    </ion-row>
+      
+  </div>
+
+</ion-content>
+
