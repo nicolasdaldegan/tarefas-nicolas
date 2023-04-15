@@ -7,71 +7,57 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="header">
-    <img [src]='icon' width="300px" >
+  <div id="cabecalho">
+    <img [src]='icon'>
     <p style="text-align: center;"><strong>Qual a receita de hoje?</strong></p>
-    <ion-searchbar placeholder="buscar..."></ion-searchbar>
+    <ion-searchbar placeholder="buscar..." color="light"></ion-searchbar>
   </div>
 
-  <ion-grid>
+  <div id="corpo">
     <ion-row class="ion-justify-content-center">
-      <ion-card color="primary">
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
+      <ion-card fill="clear"  class="ion-text-center">
+
         <ion-card-content>
-          Card Content
+          <img src="../../assets/icon/refeicao.jpg">
         </ion-card-content>
+        <ion-card-subtitle>Refeições</ion-card-subtitle>
       </ion-card>
       
-      <ion-card color="secondary">
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
+      <ion-card color="secondary" class="ion-text-center">
         <ion-card-content>
-          Card Content
+          <img src="../../assets/icon/snacks.png">
         </ion-card-content>
+
+      <ion-card-subtitle>Snacks</ion-card-subtitle>
       </ion-card>
   
-      <ion-card color="tertiary">
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Card Content
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-content class="ion-text-center">
+          <img src="../../assets/icon/bebidas.jpg">
         </ion-card-content>
+
+        <ion-card-subtitle>Bebidas</ion-card-subtitle>
+
       </ion-card>
       
-      <ion-card color="success">
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
+      <ion-card color="secondary" class="ion-text-center">
         <ion-card-content>
-          Card Content
+          <img src="../../assets/icon/sobremesas.jpg">
         </ion-card-content>
+
+        <ion-card-subtitle>Sobremesas</ion-card-subtitle>
       </ion-card>
       
-      <ion-card color="warning">
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
+      <ion-card color="secondary" class="ion-text-center">
         <ion-card-content>
-          Card Content
+          <img src="../../assets/icon/fit.png">
         </ion-card-content>
+
+        <ion-card-subtitle>Fitness</ion-card-subtitle>
       </ion-card>
       
     </ion-row>
       
-  </ion-grid>
+  </div>
 
 </ion-content>

@@ -12,6 +12,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
   public icon: string = "../../assets/icon.jpg"
+  // public icon2: string = "../../assets/icon/refeicao.jpg"
   constructor() { }
 
   ngOnInit() {
