@@ -11,7 +11,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class CadastroPage implements OnInit {
-
+  public icon: string = "../../assets/icon.jpg"
   constructor() { }
 
   ngOnInit() {

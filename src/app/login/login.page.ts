@@ -12,7 +12,7 @@ import { RouterLink, RouterModule } from '@angular/router';
   imports: [IonicModule, CommonModule, FormsModule,RouterLink, RouterModule]
 })
 export class LoginPage implements OnInit {
-
+  public icon: string = "../../assets/icon.jpg"
   constructor() { }
 
   ngOnInit() {
