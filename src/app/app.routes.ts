@@ -22,7 +22,11 @@ export const routes: Routes = [
   {
     path: 'esqueci-senha',
     loadComponent: () => import('./esqueci-senha/esqueci-senha.page').then( m => m.EsqueciSenhaPage)
+  },  {
+    path: 'inicio',
+    loadComponent: () => import('./inicio/inicio.page').then( m => m.InicioPage)
   },
+
 ];
 @NgModule({
   imports: [
