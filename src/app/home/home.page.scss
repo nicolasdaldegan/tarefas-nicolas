@@ -1,6 +1,12 @@
 
 ion-content {     
-    --background: url('../../assets/restaurante.jpg') no-repeat center center / cover !important ; 
+    --background: url('../../assets/pano.jpg') no-repeat center center / cover !important ; 
+
+    ion-col{
+        .ion-text-center{
+            margin-top: 70%;
+        }
+    }
 }
 
 img {
@@ -8,6 +14,6 @@ img {
     width: auto;
     margin: auto;
     display: flex;
-    margin-top: 30%;
+    margin-top: 20%;
     border-radius: 50%;
 }
