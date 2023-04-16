@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { ReceitaService } from './../service/receita.service'
+import { TipoDeReceitaService } from '../service/tipo-de-receita.service'
 import { RouterLink, RouterModule } from '@angular/router';
+import { TipoDeReceitas } from '../model/tipo-de-receita.model';
 
 @Component({
   selector: 'app-inicio',
@@ -14,10 +15,12 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class InicioPage implements OnInit {
   public icon: string = "../../assets/icon.jpg"
+  public tipodereceitas : TipoDeReceitas[] = [];
   // public icon2: string = "../../assets/icon/refeicao.jpg"
-  constructor(private receitaServ: ReceitaService) { }
+  constructor(private receitaServ: TipoDeReceitaService) { }
 
   ngOnInit() {
+    this.tipodereceitas = this.receitaServ.obterTodas();
   }
 
 }

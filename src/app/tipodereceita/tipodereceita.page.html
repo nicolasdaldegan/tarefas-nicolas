@@ -1,0 +1,42 @@
+<ion-header  class="ion-no-border" fill="clear">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="cabecalho">
+    <img [src]='icon'>
+    <p style="text-align: center;"><strong>Qual a receita de hoje?</strong></p>
+    <ion-searchbar placeholder="buscar..." color="light"></ion-searchbar>
+  </div>
+  <div id="corpo">
+    <h3 style="text-align: center;"><strong>{{tipodereceitas.nome}}</strong></h3>
+    
+    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==1">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let refeicao of refeicao" [routerLink]="['/receitas', refeicao.id]" >
+        <ion-card-content>
+          <img [src]="refeicao.foto">
+        </ion-card-content>
+
+      <ion-card-subtitle><strong>{{refeicao.nome}}</strong></ion-card-subtitle>
+      </ion-card>
+      
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==2">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let snacks of snack" [routerLink]="['/snacks', snacks.id]"> 
+        <ion-card-content>
+          <img [src]="snacks.foto">
+        </ion-card-content>
+
+      <ion-card-subtitle><strong>{{snacks.nome}}</strong></ion-card-subtitle>
+      </ion-card>
+      
+    </ion-row>
+      
+  </div>
+
+</ion-content>

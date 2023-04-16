@@ -15,46 +15,13 @@
 
   <div id="corpo">
     <ion-row class="ion-justify-content-center">
-      <ion-card fill="clear"  class="ion-text-center">
+      <ion-card fill="clear" *ngFor="let receita of tipodereceitas" class="ion-text-center" [routerLink]="['/tipodereceita', receita.id]">
 
-        <ion-card-content [routerLink]="['/refeicao']">
-          <img src="../../assets/icon/refeicao.jpg">
+        <ion-card-content >
+          <img [src]='receita.foto'>
         </ion-card-content>
         
-        <ion-card-subtitle><strong>Refeições</strong></ion-card-subtitle>
-      </ion-card>
-      
-      <ion-card color="secondary" class="ion-text-center">
-        <ion-card-content>
-          <img src="../../assets/icon/snacks.png">
-        </ion-card-content>
-
-      <ion-card-subtitle><strong>Snacks</strong></ion-card-subtitle>
-      </ion-card>
-  
-      <ion-card color="secondary" class="ion-text-center">
-        <ion-card-content class="ion-text-center">
-          <img src="../../assets/icon/bebidas.jpg">
-        </ion-card-content>
-
-        <ion-card-subtitle><strong>Bebidas</strong></ion-card-subtitle>
-
-      </ion-card>
-      
-      <ion-card color="secondary" class="ion-text-center">
-        <ion-card-content>
-          <img src="../../assets/icon/sobremesas.jpg">
-        </ion-card-content>
-
-        <ion-card-subtitle><strong>Sobremesas</strong></ion-card-subtitle>
-      </ion-card>
-      
-      <ion-card color="secondary" class="ion-text-center">
-        <ion-card-content>
-          <img src="../../assets/icon/fit.png">
-        </ion-card-content>
-
-        <ion-card-subtitle><strong>Fitness</strong></ion-card-subtitle>
+        <ion-card-subtitle><strong>{{ receita.nome }}</strong></ion-card-subtitle>
       </ion-card>
       
     </ion-row>

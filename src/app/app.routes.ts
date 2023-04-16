@@ -22,18 +22,21 @@ export const routes: Routes = [
   {
     path: 'esqueci-senha',
     loadComponent: () => import('./esqueci-senha/esqueci-senha.page').then( m => m.EsqueciSenhaPage)
-  },  {
+  },
+  {
     path: 'inicio',
     loadComponent: () => import('./inicio/inicio.page').then( m => m.InicioPage)
   },
   {
-    path: 'refeicao',
-    loadComponent: () => import('./refeicao/refeicao.page').then( m => m.RefeicaoPage)
-  },
-  {
-    path: 'receitas',
+    path: 'receitas/:id',
     loadComponent: () => import('./receitas/receitas.page').then( m => m.ReceitasPage)
   },
+  {
+    path: 'tipodereceita/:id',
+    loadComponent: () => import('./tipodereceita/tipodereceita.page').then( m => m.TipodereceitaPage)
+  }
+
+
 
 ];
 @NgModule({
