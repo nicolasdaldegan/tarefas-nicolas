@@ -6,13 +6,13 @@ import { ReceitaService } from './../service/receita.service'
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-esqueci-senha',
-  templateUrl: './esqueci-senha.page.html',
-  styleUrls: ['./esqueci-senha.page.scss'],
+  selector: 'app-receitas',
+  templateUrl: './receitas.page.html',
+  styleUrls: ['./receitas.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterLink, RouterModule]
 })
-export class EsqueciSenhaPage implements OnInit {
+export class ReceitasPage implements OnInit {
   public icon: string = "../../assets/icon.jpg"
   constructor(private receitaServ: ReceitaService) { }
 

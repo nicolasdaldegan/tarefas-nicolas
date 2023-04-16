@@ -1,0 +1,25 @@
+ion-content{
+    --background: #f8dc8c no-repeat center center / cover !important ; 
+
+    #cabecalho{
+        img{
+            height: 100px;
+            width: 100px;
+            margin: auto;
+            display: flex;
+            margin-top: 5%;
+            border-radius: 50%;
+        }
+    }
+
+    #corpo{
+        img{
+            height: auto;
+            width: auto;
+            border-radius: 10%;
+        }
+        #forma{
+            padding: 25px;
+        }
+    }
+}
