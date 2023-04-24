@@ -10,6 +10,12 @@ import { Refeicao } from '../model/refeicao.model';
 import { RouterLink, RouterModule } from '@angular/router'
 import { Snacks } from '../model/snacks.model';
 import { SnacksService } from '../service/snacks.service';
+import { Bebidas } from '../model/bebidas.model';
+import { BebidasService } from '../service/bebidas.service';
+import { Sobremesas } from '../model/sobremesas.model';
+import { SobremesasService } from '../service/sobremesas.service';
+import { Fitnes } from "../model/fitnes.model";
+import { FitnesService } from '../service/fitnes.service';
 
 
 @Component({
@@ -28,11 +34,19 @@ export class TipodereceitaPage implements OnInit {
   };
   public refeicao : Refeicao[] = [];
   public snack: Snacks[] = [];
+  public bebidas: Bebidas[] = [];
+  public sobremesas: Sobremesas[] = [];
+  public fitnes: Fitnes[] = [];
+
 
   constructor(private rotaAtiva: ActivatedRoute,
               private receitaServ: TipoDeReceitaService,
               private refeicaoServ: RefeicaoService,
-              private snackServ: SnacksService) { }
+              private snackServ: SnacksService, 
+              private bebidasServ: BebidasService,
+              private sobremesasServ: SobremesasService,
+              private fitnesServ: FitnesService
+              ) { }
 
   ngOnInit() {
     const codigo = Number( this.rotaAtiva.snapshot.paramMap.get('id') );
@@ -40,6 +54,9 @@ export class TipodereceitaPage implements OnInit {
     this.tipodereceitas = this.receitaServ.obter(codigo);
     this.refeicao = this.refeicaoServ.obterTodas();
     this.snack = this.snackServ.obterTodas();
+    this.bebidas = this.bebidasServ.obterTodas();
+    this.sobremesas = this.sobremesasServ.obterTodas();
+    this.fitnes = this.fitnesServ.obterTodas();
   }
 
 }

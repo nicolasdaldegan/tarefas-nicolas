@@ -36,6 +36,39 @@
       </ion-card>
       
     </ion-row>
+
+    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==3">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let bebidas of bebidas" [routerLink]="['/bebidas', bebidas.id]"> 
+        <ion-card-content>
+          <img [src]="bebidas.foto">
+        </ion-card-content>
+
+      <ion-card-subtitle><strong>{{bebidas.nome}}</strong></ion-card-subtitle>
+      </ion-card>
+      
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==4">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let sobremesas of sobremesas" [routerLink]="['/sobremesas', sobremesas.id]"> 
+        <ion-card-content>
+          <img [src]="sobremesas.foto">
+        </ion-card-content>
+
+      <ion-card-subtitle><strong>{{sobremesas.nome}}</strong></ion-card-subtitle>
+      </ion-card>
+      
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==5">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let fitnes of fitnes" [routerLink]="['/fitnes', fitnes.id]"> 
+        <ion-card-content>
+          <img [src]="fitnes.foto">
+        </ion-card-content>
+
+      <ion-card-subtitle><strong>{{fitnes.nome}}</strong></ion-card-subtitle>
+      </ion-card>
+
+    </ion-row>
       
   </div>
 
