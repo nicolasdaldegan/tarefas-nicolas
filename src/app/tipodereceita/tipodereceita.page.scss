@@ -15,6 +15,7 @@ ion-content{
     #corpo{
         ion-card{
             border-radius: 25%;
+            width: 30%;
         }
 
         img{
@@ -22,5 +23,9 @@ ion-content{
             width: 90px;
             border-radius: 25%;
         }
+    }
+
+    ion-card-subtitle{
+        font-family: cursive;
     }
 }
