@@ -17,7 +17,7 @@ export class RefeicaoService {
     {
       id:1,
       foto:"../../assets/icon/strogonoff.jpg",
-      nome:"Stronoff",
+      nome:"Stronoff"
     },
     {
       id:2,
