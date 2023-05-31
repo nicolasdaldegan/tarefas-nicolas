@@ -14,37 +14,22 @@
   </div>
 
   <div id="corpo">
-    <ion-card fill="clear">
-      <ion-card-title class="ion-text-center">Strogonoff <ion-icon class="favorito" name="heart"></ion-icon></ion-card-title>
+    <ion-card fill="clear" >
+      <ion-card-title class="ion-text-center">{{receita.nome}}{{snacks.nome}}{{bebidas.nome}}{{sobremesas.nome}}{{fitness.nome}}<ion-icon class="favorito" name="heart"></ion-icon></ion-card-title>
 
       
       <ion-card-content>
-        <img src="../../assets/icon/strogonoff.jpg">
+        <img [src]="receita.foto"[src]="snacks.foto"[src]="bebidas.foto"[src]="sobremesas.foto"[src]="fitness.foto">
       </ion-card-content>
 
       <ul>
         <h3>Ingredientes</h3>
-        <li>500 gramas de peito de frango cortado em cubos ou tirinha</li>
-        <li>1 colher de sopa de manteiga</li>
-        <li>1/2 cebola picada ou ralada</li>
-        <li>Sal e pimenta a gosto</li>
-        <li>1/2 xicara de chá de água</li>
-        <li>1 caixinha de creme de leite</li>
-        <li>6 colheres de sopa de ketchup</li>
+        {{receita.ingredientes}}{{snacks.ingredientes}}{{bebidas.ingredientes}}{{sobremesas.ingredientes}}{{fitness.ingredientes}}
       </ul>
 
       <div id="forma">
-        <p><strong>Passo 1</strong><br>-Reuna todos os Ingredientes</p>
-
-        <p><strong>Passo 2</strong><br>-Leve uma panela ao fogo e refogue a cebola na manteiga até que ela fique dourada
-        </p>
-
-        <p><strong>Passo 3</strong><br>-Na sequência acrescente o frango, o sal, a pimenta, misture e espere dourar</p>
-
-        <p><strong>Passo 4</strong><br>-Coloque a água e deixe ferver</p>
-
-        <p><strong>Passo 5</strong><br>-Quando boa parte da água evaporar, adicione o creme de leite, o ketchup, misture
-          e deixe cozinhar mais um pouco, em seguida só desligue o fogo e servir, Bom apetite!</p>
+        <h3>Modo de Preparo</h3>
+        {{receita.descricao}}{{snacks.descricao}}{{bebidas.descricao}}{{sobremesas.descricao}}{{fitness.descricao}}
       </div>
 
     </ion-card>

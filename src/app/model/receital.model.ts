@@ -1,34 +1,38 @@
 export interface Receita {
-    id: number;//id: string;
+    id: string;//id: string;
     nome: string;
     descricao: string;
-    nota: number;
-    tipo: TipoReceita,
+    //nota: number;
+    tipo: string,
     foto: string;
-    comentarios: Comentario[];
-    ingredientes: Ingrediente[];
+    //comentarios: Comentario[];
+    ingredientes: string;
 }
 
 
-export enum TipoReceita {
-    fitness = "fitness",
-    sobremesas = "sobremesas",
-    snacks = "snacks",
-    refeicao = "refeicao",
-};
 
-interface Comentario {
-    id: string;
-    autor: string;
-    texto: string;
-    data: string;
-};
+// interface Comentario {
+//     id: string;
+//     autor: string;
+//     texto: string;
+//     data: string;
+// };
 
-
-interface Ingrediente {
-    id: string;
-    nome: string;
-    tipo: string;
-    unidade: string;
-    quantidade: number;
+export function create2() {
+    return {
+        id:'',
+        nome: '',
+        foto: '',
+        descricao:'',
+        ingredientes:'',
+        tipo:''
+    };
 }
+
+// interface Ingrediente {
+//     id: string;
+//     nome: string;
+//     tipo: string;
+//     unidade: string;
+//     quantidade: number;
+// }

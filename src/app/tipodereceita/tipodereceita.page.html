@@ -14,10 +14,10 @@
     <ion-searchbar placeholder="buscar..." color="light"></ion-searchbar>
   </div>
   <div id="corpo">
-    <h3 style="text-align: center;"><strong>{{tipodereceitas.nome}}</strong></h3>
+    <h3 style="text-align: center;"><strong>{{tipo.nome}}</strong></h3>
     
-    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==1">
-      <ion-card color="secondary" class="ion-text-center" *ngFor="let refeicao of refeicao" [routerLink]="['/receitas', refeicao.id]" >
+    <ion-row class="ion-justify-content-center" *ngIf="tipo.id==='1'">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let refeicao of receita" [routerLink]="['/receitas', refeicao.id]" >
         <ion-card-content>
           <img [src]="refeicao.foto">
         </ion-card-content>
@@ -27,8 +27,8 @@
       
     </ion-row>
 
-    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==2">
-      <ion-card color="secondary" class="ion-text-center" *ngFor="let snacks of snack" [routerLink]="['/snacks', snacks.id]"> 
+    <ion-row class="ion-justify-content-center" *ngIf="tipo.id==='2'">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let snacks of snacks" [routerLink]="['/receitas', snacks.id]"> 
         <ion-card-content>
           <img [src]="snacks.foto">
         </ion-card-content>
@@ -38,8 +38,8 @@
       
     </ion-row>
 
-    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==3">
-      <ion-card color="secondary" class="ion-text-center" *ngFor="let bebidas of bebidas" [routerLink]="['/bebidas', bebidas.id]"> 
+    <ion-row class="ion-justify-content-center" *ngIf="tipo.id==='3'">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let bebidas of bebidas" [routerLink]="['/receitas', bebidas.id]"> 
         <ion-card-content>
           <img [src]="bebidas.foto">
         </ion-card-content>
@@ -49,8 +49,8 @@
       
     </ion-row>
 
-    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==4">
-      <ion-card color="secondary" class="ion-text-center" *ngFor="let sobremesas of sobremesas" [routerLink]="['/sobremesas', sobremesas.id]"> 
+    <ion-row class="ion-justify-content-center" *ngIf="tipo.id==='4'">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let sobremesas of sobremesas" [routerLink]="['/receitas', sobremesas.id]"> 
         <ion-card-content>
           <img [src]="sobremesas.foto">
         </ion-card-content>
@@ -60,13 +60,13 @@
       
     </ion-row>
 
-    <ion-row class="ion-justify-content-center" *ngIf="tipodereceitas.id==5">
-      <ion-card color="secondary" class="ion-text-center" *ngFor="let fitnes of fitnes" [routerLink]="['/fitnes', fitnes.id]"> 
+    <ion-row class="ion-justify-content-center" *ngIf="tipo.id==='5'">
+      <ion-card color="secondary" class="ion-text-center" *ngFor="let fitness of fitness" [routerLink]="['/receitas', fitness.id]"> 
         <ion-card-content>
-          <img [src]="fitnes.foto">
+          <img [src]="fitness.foto">
         </ion-card-content>
 
-      <ion-card-subtitle><strong>{{fitnes.nome}}</strong></ion-card-subtitle>
+      <ion-card-subtitle><strong>{{fitness.nome}}</strong></ion-card-subtitle>
       </ion-card>
 
     </ion-row>

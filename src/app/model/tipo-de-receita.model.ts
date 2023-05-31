@@ -1,5 +1,13 @@
 export interface TipoDeReceitas{
-    id: number;
+    id: string;
     foto: string;
     nome: string;
+}
+
+export function create() {
+    return {
+        id:'',
+        nome: '',
+        foto: ''
+    };
 }

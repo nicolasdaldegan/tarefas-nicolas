@@ -5,7 +5,6 @@ import { IonicModule } from '@ionic/angular';
 import { TipoDeReceitaService } from '../service/tipo-de-receita.service'
 import { RouterLink, RouterModule } from '@angular/router';
 import { TipoDeReceitas } from '../model/tipo-de-receita.model';
-import { RefeicaoService } from '../service/refeicao.service';
 
 @Component({
   selector: 'app-inicio',
@@ -16,18 +15,15 @@ import { RefeicaoService } from '../service/refeicao.service';
 })
 export class InicioPage implements OnInit {
   public icon: string = "../../assets/icon.jpg"
-  public tipodereceitas : TipoDeReceitas[] = [];
+  public tipodereceitas : any[] = [];
 
-  public refeicoes: unknown[] = [];
-  // public icon2: string = "../../assets/icon/refeicao.jpg"
-  constructor(private receitaServ: TipoDeReceitaService, private refeicaoServ: RefeicaoService) { }
+  constructor(private tipoServ: TipoDeReceitaService) { }
 
   ngOnInit() {
-    this.tipodereceitas = this.receitaServ.obterTodas();
 
-    this.refeicaoServ.getAll().then((documentos)=>{
-      this.refeicoes = documentos;
-      console.log(this.refeicoes);
+    this.tipoServ.getAll().then((documentos)=>{
+      this.tipodereceitas = documentos;
+      console.log(this.tipodereceitas);
     })
   }
 
